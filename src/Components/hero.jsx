@@ -45,63 +45,69 @@ function Hero() {
             Instant AI Access
           </motion.p>
 
-          <motion.div
-            className="flex flex-col items-center mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
-          >
-            <div className="flex items-center justify-center gap-8">
-              <motion.button
-                className="mt-8 flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl shadow-blue-500/30 hover:shadow-blue-500/40"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  window.open(
-                    "https://chromewebstore.google.com/detail/hbkedaidoldlbapoeidhipjedijldfnp?utm_source=item-share-cb",
-                    "_blank"
-                  );
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="#FFFFFF"
-                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"
-                  />
-                  <path fill="#FFFFFF" d="M12 6l-6 6 6 6 6-6-6-6z" />
-                </svg>
-                Add to Chrome - It's Free
-              </motion.button>
-              <motion.button
-                className="mt-8 flex items-center justify-center gap-3 bg-gradient-to-r from-green-700 to-blue-700 hover:from-green-700 hover:to-blue-900 transition-all duration-300 text-white font-semibold text-lg px-8 py-4 rounded-lg shadow-lg hover:shadow-xl shadow-blue-500/30 hover:shadow-blue-500/40"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => navigate("/profile")}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="#FFFFFF"
-                    d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"
-                  />
-                  <path fill="#FFFFFF" d="M12 6l-6 6 6 6 6-6-6-6z" />
-                </svg>
-                Learn How to Use Voxc
-              </motion.button>
-            </div>
-            <p className="mt-4 text-gray-300 text-sm">
-              Works on Chrome, Edge, and Brave browsers
-            </p>
-          </motion.div>
+<motion.div
+  className="flex flex-col items-center mt-8 px-4"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut", delay: 1.2 }}
+>
+  <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 w-full max-w-2xl">
+    {/* Add to Chrome Button */}
+    <motion.button
+      className="w-full md:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 text-white font-semibold text-lg px-6 md:px-8 py-4 rounded-lg shadow-lg hover:shadow-xl shadow-blue-500/30 hover:shadow-blue-500/40"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => {
+        window.open(
+          "https://chromewebstore.google.com/detail/hbkedaidoldlbapoeidhipjedijldfnp?utm_source=item-share-cb",
+          "_blank"
+        );
+      }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="#FFFFFF"
+          d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"
+        />
+        <path fill="#FFFFFF" d="M12 6l-6 6 6 6 6-6-6-6z" />
+      </svg>
+      Add to Chrome - It's Free
+    </motion.button>
+
+    {/* Learn How Button */}
+    <motion.button
+      className="w-full md:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-green-700 to-blue-700 hover:from-green-700 hover:to-blue-900 transition-all duration-300 text-white font-semibold text-lg px-6 md:px-8 py-4 rounded-lg shadow-lg hover:shadow-xl shadow-blue-500/30 hover:shadow-blue-500/40"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => navigate("/profile")}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="#FFFFFF"
+          d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"
+        />
+        <path fill="#FFFFFF" d="M12 6l-6 6 6 6 6-6-6-6z" />
+      </svg>
+      Learn How to Use Voxc
+    </motion.button>
+  </div>
+
+  {/* Info Text */}
+  <p className="mt-4 text-gray-300 text-sm text-center">
+    Works on Chrome, Edge, and Brave browsers
+  </p>
+</motion.div>
+
         </div>
       </div>
 
