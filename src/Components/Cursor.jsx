@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 function CursorTrail() {
   const circlesRef = useRef([]);
   const trailPositions = useRef([]);
-  const mousePos = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+  const mousePos = useRef({ x: window.innerWidth - 10, y: 10 }); // Start at top-right
   const animationFrameId = useRef(null);
 
   const circleCount = 24;
@@ -17,7 +17,6 @@ function CursorTrail() {
     '#7dd3fc', '#22d3ee', '#06b6d4', '#0ea5e9', '#38bdf8', '#67e8f9'
   ];
 
-  // Get smooth gradient color from palette
   const getColor = (index) => {
     const ratio = index / (circleCount - 1);
     const paletteIndex = Math.floor(ratio * (colorPalette.length - 1));
