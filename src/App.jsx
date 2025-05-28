@@ -1,32 +1,34 @@
-import { useState, useEffect } from 'react'
-import Hero from './Components/hero'
-import About from './Components/About'
-import FreeApi from './Components/FreeApi'
-import Loader from './Components/Loadder'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+import Profile from "./Components/learnHowToUse";
+import Cursor from "./Components/Cursor";
+import FirstStep from "./Steps/FirstStep";
+import SecondStep from "./Steps/SecondStep";
+import ThirdStep from "./Steps/ThirdStep";
+import FourthStep from "./Steps/FourthStep";
+import FifthStep from "./Steps/FifthStep";
+import SixthStep from "./Steps/SixthStep";
+import Nav from "./Components/Nav";
+import SideStep from "./Steps/SideStep";
 
 function App() {
- const [count, setCount] = useState(0)
- const [loading, setLoading] = useState(true)
-
- useEffect(() => {
-   const timer = setTimeout(() => {
-     setLoading(false)
-   }, 2000)
-
-   return () => clearTimeout(timer)
- }, [])
-
- if (loading) {
-   return <Loader />
- }
-
- return (
-   <div className='bg-black overflow-hidden'> 
-     <Hero />
-     <About />
-     <FreeApi />
-   </div>
- )
+  return (
+    <Router classname="">
+      <Nav />
+      <Cursor />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/firstStep" element={<FirstStep />} />
+        <Route path="/2nd-Step" element={<SecondStep />} />
+        <Route path="/3rd-Step" element={<ThirdStep />} />
+        <Route path="/side-Step" element={<SideStep />} />
+        <Route path="/4th-Step" element={<FourthStep />} />
+        <Route path="/5th-Step" element={<FifthStep />} />
+        <Route path="/6th-Step" element={<SixthStep />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
