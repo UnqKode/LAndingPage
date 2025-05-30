@@ -205,13 +205,15 @@ const About = () => {
                 Customize your experience by adding your personal API key.
                 Unlock unlimited access and personalize AI interactions.
               </p>
+              <a href="https://aistudio.google.com/app/apikey">
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-md text-white font-medium transition"
               >
-                <a href="https://aistudio.google.com/app/apikey">Get API Key</a>
+                Get API Key
               </motion.button>
+                </a>
             </div>
           </motion.div>
         </div>

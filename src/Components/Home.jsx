@@ -3,6 +3,7 @@ import Hero from './hero'
 import About from './About'
 import FreeApi from './FreeApi'
 import Loader from './Loadder'
+import Why from './Why'
 
 
 function Home() {
@@ -24,6 +25,7 @@ function Home() {
  return (
    <div className='bg-black overflow-hidden'> 
      <Hero />
+     <Why />
      <About />
      <FreeApi />
    </div>
