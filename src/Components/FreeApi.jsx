@@ -14,26 +14,25 @@ const FreeApi = () => {
   const steps = [
     {
       icon: <FaGoogle className="text-blue-500" />,
-      title: "Go to Google AI Studio",
-      description: "Navigate to https://aistudio.google.com and sign in with your Google account"
+      title: 'Go to Google AI Studio',
+      description: 'Navigate to https://aistudio.google.com and sign in with your Google account',
     },
     {
       icon: <FaKey className="text-yellow-500" />,
-      title: "Create new API key",
-      description: "Click 'Get API Key' in the dashboard and create a new key for Gemini 2.0 Flash"
+      title: 'Create new API key',
+      description: "Click 'Get API Key' in the dashboard and create a new key for Gemini 2.0 Flash",
     },
     {
       icon: <FaTerminal className="text-green-500" />,
-      title: "Use in your project",
-      description: "Copy the key and integrate it with Voxc or your own applications"
-    }
+      title: 'Use in your project',
+      description: 'Copy the key and integrate it with Voxc or your own applications',
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-tr from-black via-black to-blue-950 text-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ amount: 0.8 }}
@@ -48,16 +47,22 @@ const FreeApi = () => {
           </p>
           <motion.a
             href="https://aistudio.google.com/app/apikey"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Google AI Studio
-            <FaArrowRight className="text-sm" />
+            Google AI Studio <FaArrowRight className="text-sm" />
           </motion.a>
         </motion.div>
 
-        {/* Steps Grid */}
+        <div className="text-center mb-10">
+          <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
+            More About Voxc API Integration
+          </h3>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {steps.map((step, index) => (
             <motion.div
@@ -76,7 +81,6 @@ const FreeApi = () => {
           ))}
         </div>
 
-        {/* API Key Box */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -86,10 +90,9 @@ const FreeApi = () => {
         >
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-semibold flex items-center gap-2">
-              <FaKey className="text-yellow-500" />
-              <span>Your API Key</span>
+              <FaKey className="text-yellow-500" /> Your API Key
             </h3>
-            <motion.button 
+            <motion.button
               onClick={copyToClipboard}
               className="flex items-center gap-2 px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition"
               whileHover={{ scale: 1.05 }}
@@ -97,13 +100,11 @@ const FreeApi = () => {
             >
               {copied ? (
                 <>
-                  <FaCheck className="text-green-500" />
-                  <span>Copied!</span>
+                  <FaCheck className="text-green-500" /> Copied!
                 </>
               ) : (
                 <>
-                  <FaCopy />
-                  <span>Copy</span>
+                  <FaCopy /> Copy
                 </>
               )}
             </motion.button>
@@ -116,7 +117,6 @@ const FreeApi = () => {
           </p>
         </motion.div>
 
-        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -127,12 +127,13 @@ const FreeApi = () => {
           <h3 className="text-2xl font-semibold mb-6">Ready to integrate?</h3>
           <motion.a
             href="https://chromewebstore.google.com/detail/hbkedaidoldlbapoeidhipjedijldfnp?utm_source=item-share-cb"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-purple-500 rounded-lg font-medium hover:opacity-90 transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Try Voxc with Your API Key
-            <FaArrowRight />
+            Try Voxc with Your API Key <FaArrowRight />
           </motion.a>
         </motion.div>
       </div>
