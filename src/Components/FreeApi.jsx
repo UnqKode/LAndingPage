@@ -30,7 +30,7 @@ const FreeApi = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-black via-black to-blue-950 text-white py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-black via-black to-blue-950 text-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Profile from "./Components/learnHowToUse";
-import Cursor from "./Components/Cursor";
 import FirstStep from "./Steps/FirstStep";
 import SecondStep from "./Steps/SecondStep";
 import ThirdStep from "./Steps/ThirdStep";
@@ -11,11 +10,11 @@ import SixthStep from "./Steps/SixthStep";
 import Nav from "./Components/Nav";
 import SideStep from "./Steps/SideStep";
 
+
 function App() {
   return (
     <Router classname="">
       <Nav />
-      <Cursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />

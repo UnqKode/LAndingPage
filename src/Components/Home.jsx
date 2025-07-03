@@ -4,6 +4,7 @@ import About from './About'
 import FreeApi from './FreeApi'
 import Loader from './Loadder'
 import Why from './Why'
+import How from "./how";
 
 
 function Home() {
@@ -26,8 +27,9 @@ function Home() {
    <div className='bg-black overflow-hidden'> 
      <Hero />
      <Why />
-     <About />
+     <How/>
      <FreeApi />
+     <About />
    </div>
  )
 }
