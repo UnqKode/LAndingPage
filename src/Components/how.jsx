@@ -62,7 +62,7 @@ const How = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-black text-white px-6 py-20 overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-tl from-black via-black to-blue-950 text-white px-6 py-20 overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
         <motion.div
           initial="hidden"
